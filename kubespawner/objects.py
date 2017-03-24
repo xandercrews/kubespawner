@@ -99,6 +99,8 @@ def make_pod_spec(
                     'image': image_spec,
                     'command': cmd,
                     'imagePullPolicy': image_pull_policy,
+                    'stdin': True,
+                    'tty': True,
                     'ports': [{
                         'containerPort': port,
                     }],
