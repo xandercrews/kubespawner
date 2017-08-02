@@ -820,7 +820,7 @@ class KubeSpawner(Spawner):
 
     @gen.coroutine
     def poll_and_notify(self):
-        return self.poll()
+        return (yield self.poll())
 
     @gen.coroutine
     def stop_notify(self, pod):
